@@ -1,16 +1,12 @@
 import React from "react";
 import "./App.css";
 import Training from "./components/Training";
+import ContentTable from "./components/ContentTable";
 
 function App() {
   return (
     <>
-      <Training
-        title="Formation 1"
-        cost={0}
-        id=""
-        duration="20 jours"
-        version="1.0"
+      <ContentTable
       />
       
     </>
