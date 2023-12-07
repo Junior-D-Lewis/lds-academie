@@ -1,15 +1,12 @@
 import React from "react";
-import "./App.css";
-import Training from "./components/Training";
-import ContentTable from "./components/ContentTable";
+
+import Root from "./component/Root";
 
 function App() {
   return (
-    <>
-      <ContentTable
-      />
-      
-    </>
+    <div>
+      <Root />
+    </div>
   );
 }
 
