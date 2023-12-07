@@ -13,7 +13,7 @@ export default function index() {
       </div>
       <div className="h-screen grid-rows-2 p-6">
         <img className="w-[30rem] h-[25rem]" src={avatar} alt="" />
-        <div className="border-2 mt-12 h-44">
+        <div className=" mt-12">
           <ChatBox />
         </div>
       </div>

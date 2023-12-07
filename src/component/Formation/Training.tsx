@@ -1,10 +1,10 @@
 import React from "react";
 
-import qualiopi from "../assets/qualiopi.png";
-import aws from "../assets/aws.png";
-import cisco from "../assets/cisco.png";
-import redhat from "../assets/redhat.png";
-import microsoft from "../assets/microsoft.png";
+import qualiopi from "../../assets/qualiopi.png";
+import aws from "../../assets/aws.png";
+import cisco from "../../assets/cisco.png";
+import redhat from "../../assets/redhat.png";
+import microsoft from "../../assets/microsoft.png";
 
 interface TrainingProps {
   id: string;
@@ -14,13 +14,14 @@ interface TrainingProps {
   cost: number;
 }
 
-const Training: React.FC<TrainingProps> = ({
-  id,
-  duration,
-  version,
-  title,
-  cost,
-}) => {
+export const Training = () => {
+  const [id, duration, version, title, cost] = [
+    "1",
+    "3 mois",
+    "3.1",
+    "Formation de dev react",
+    900,
+  ];
   return (
     <>
       <div className="flex flex-col gap-2">
@@ -42,7 +43,7 @@ const Training: React.FC<TrainingProps> = ({
           <span className="">Durée : {duration}</span>
           <span className="">Version : {version}</span>
         </div>
-        
+
         <div className="flex justify-around">
           <div className="flex flex-col gap-2">
             <span className="text-center">Modalité pédagogique</span>
@@ -56,7 +57,7 @@ const Training: React.FC<TrainingProps> = ({
             <textarea className="h-[1.5rem] rounded border font-semibold focus:outline-blue-500" />
           </div>
         </div>
-        
+
         <div className="">
           <table className="w-full table-auto">
             <thead className="bg-gray-300">
@@ -72,23 +73,7 @@ const Training: React.FC<TrainingProps> = ({
             </thead>
           </table>
         </div>
-        
-        <footer className="absolute bottom-0 flex w-full">
-          <div className="flex flex-col gap-2 w-[12rem] m-auto mr-0">
-            <span className="text-center">NOS LABELS ET PARTENAIRES</span>
-            <div className="flex">
-              <img className="w-1/2" src={qualiopi} alt="Qualiopi" />
-              <img className="w-1/2" src={aws} alt="AWS" />
-            </div>
-            <div className="flex flex-col"></div>
-            <img className="w-1/2" src={cisco} alt="CISCO" />
-            <img className="w-1/2" src={microsoft} alt="MICROSOFT" />
-            <img className="w-1/2" src={redhat} alt="REDHAT" />
-          </div>
-        </footer>
       </div>
     </>
   );
 };
-
-export default Training;

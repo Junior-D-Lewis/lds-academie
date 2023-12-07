@@ -8,8 +8,6 @@ type msgProps = {
 
 export default function ChatBox() {
   const [messages, setMessages] = useState<msgProps[]>([]);
-  const [userName, setUserName] = useState<string>("");
-  const [textMessage, setTextMessage] = useState<string>("");
 
   const setNewMessage = (msg: msgProps) => {
     setMessages([...messages, msg]);
@@ -18,19 +16,38 @@ export default function ChatBox() {
   const sendMessage = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const msg = {
-      username: userName,
-      text: textMessage,
+      username: formData.username,
+      text: formData.text,
     };
     setNewMessage(msg);
   };
 
+  const [formData, setFormData] = React.useState<msgProps>({
+    username: "",
+    text: "",
+  });
+
+  function handleInputChange(event: React.ChangeEvent<HTMLInputElement>) {
+    const { name, value } = event.target;
+    setFormData({ ...formData, [name]: value });
+  }
+
+  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const msg = {
+      username: formData.username,
+      text: formData.text,
+    };
+    sendMessage(event);
+  }
+
   return (
     <div className="container">
       <div className="row">
-        <div className="col-4">
+        <div className="">
           <div className="card">
             <div className="card-body">
-              <div className="card-title">My first chat</div>
+              <div className="card-title">Chat box</div>
               <hr />
               <div className="messages">
                 {messages.map((msg) => {
@@ -42,25 +59,27 @@ export default function ChatBox() {
                 })}
               </div>
             </div>
-            <form onSubmit={(e) => sendMessage(e)}>
+
+            <form onSubmit={handleSubmit}>
               <div className="card-footer">
                 <input
-                  id="username"
                   type="text"
+                  name="username"
                   placeholder="Username"
                   className="form-control"
-                  value={userName}
-                  onChange={() => setUserName}
+                  value={formData.username}
+                  onChange={handleInputChange}
                 />
                 <br />
                 <input
-                  id="text"
                   type="text"
-                  placeholder="Your message"
+                  name="text"
+                  placeholder="Username"
                   className="form-control"
-                  value={textMessage}
-                  onChange={() => setTextMessage}
+                  value={formData.text}
+                  onChange={handleInputChange}
                 />
+
                 <br />
                 <button type="submit" className="btn btn-primary form-control">
                   send

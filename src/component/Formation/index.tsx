@@ -5,7 +5,7 @@ import CardFormation from "./CardFormation";
 
 export default function index() {
   return (
-    <div className="grid grid-flow-row">
+    <div className="grid grid-flow-row mt-[10rem]">
       <div className="flex justify-center items-center">
         <img src={infomatique} className="h-[28rem] w-full absolute" />
         <h1 className="relative text-white text-7xl mt-20">INFORMATIQUE</h1>
@@ -20,7 +20,9 @@ export default function index() {
 
         <div className="grid gap-4 grid-cols-3 col-span-2">
           {datas.map((data) => (
-            <CardFormation data={data} />
+            <div onClick={() => window.open("/training")}>
+              <CardFormation data={data} />
+            </div>
           ))}
         </div>
       </div>
