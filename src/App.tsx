@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";
+
 import Root from "./component/Root";
 
 function App() {
