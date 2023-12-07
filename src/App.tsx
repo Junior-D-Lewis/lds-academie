@@ -1,12 +1,20 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Training from "./components/Training";
 
 function App() {
   return (
-    <h1 className="text-3xl font-bold underline text-blue-600">
-      Simple React Typescript Tailwind Sample
-    </h1>
-  );  
+    <>
+      <Training
+        title="Formation 1"
+        cost={0}
+        id=""
+        duration="20 jours"
+        version="1.0"
+      />
+      
+    </>
+  );
 }
 
 export default App;
