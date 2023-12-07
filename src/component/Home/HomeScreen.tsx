@@ -1,12 +1,12 @@
 import React from "react";
-import { Carousel, initTE } from "tw-elements";
+// import { Carousel, initTE } from "tw-elements";
 
 import info1 from "../../assets/info-1.png";
 import info2 from "../../assets/info-2.png";
 import reseau from "../../assets/reseaux.png";
 import telecom from "../../assets/telecom.png";
 import ia from "../../assets/ia.png";
-initTE({ Carousel });
+// initTE({ Carousel });
 
 export default function HomeScreen() {
   return (
