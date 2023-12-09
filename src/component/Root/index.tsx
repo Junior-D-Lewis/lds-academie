@@ -1,6 +1,5 @@
 import React from "react";
 import Partenaires from "../Partenaires";
-import Header from "../Header";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import routes from "../../Routes";
 import Header2 from "../Header/Header2";

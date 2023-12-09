@@ -1,31 +1,61 @@
 export const datas = [
   {
-    formationName: "DevOps 1",
+    formationName: "Intelligence Artificielle (IA)",
     lastUpdate: "01/12/2023",
     time: "23h45min",
   },
   {
-    formationName: "React JS",
+    formationName: "Cybersécurité",
     lastUpdate: "15/11/2023",
     time: "23h45min",
   },
   {
-    formationName: "AWS",
-    lastUpdate: "27/09/2023",
+    formationName: "Microsoft",
+    lastUpdate: "Gestion de projets",
     time: "10h05min",
   },
   {
-    formationName: "Cybersecurité",
+    formationName: "Gestion de projets",
     lastUpdate: "22/10/2023",
     time: "19h35min",
   },
   {
-    formationName: "Cybersecurité",
+    formationName: "Cloud Computing",
     lastUpdate: "22/10/2023",
     time: "19h35min",
   },
   {
-    formationName: "Cybersecurité",
+    formationName: "Cisco",
+    lastUpdate: "22/10/2023",
+    time: "19h35min",
+  },
+  {
+    formationName: "IBM",
+    lastUpdate: "22/10/2023",
+    time: "19h35min",
+  },
+  {
+    formationName: "VMware",
+    lastUpdate: "22/10/2023",
+    time: "19h35min",
+  },
+  {
+    formationName: "AWS",
+    lastUpdate: "22/10/2023",
+    time: "19h35min",
+  },
+  {
+    formationName: "Palo Alto",
+    lastUpdate: "22/10/2023",
+    time: "19h35min",
+  },
+  {
+    formationName: "Palo Alto",
+    lastUpdate: "22/10/2023",
+    time: "19h35min",
+  },
+  {
+    formationName: "DevOps",
     lastUpdate: "22/10/2023",
     time: "19h35min",
   },
