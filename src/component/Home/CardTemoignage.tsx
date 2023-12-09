@@ -1,7 +1,7 @@
 import React from "react";
 import avatar from "../../assets/avatar.png";
 
-type CardProps = {
+export type CardProps = {
   name: string;
   formation: string;
   text: string;
