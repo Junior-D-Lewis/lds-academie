@@ -1,6 +1,6 @@
 export const datas = [
   {
-    formationName: "Intelligence Artificielle (IA)",
+    formationName: "Intelligence Artificielle",
     lastUpdate: "01/12/2023",
     time: "23h45min",
   },
